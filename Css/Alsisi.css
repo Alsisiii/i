@@ -10,6 +10,55 @@
 
 }
 
+.spikes {
+    position: relative;
+}
+
+
+.spikes::after {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    z-index: 1;
+    background-size: 30px 30px;
+}
+
+
+
+.dots {
+    position: absolute;
+    background-image: url(../Image/dots.png);
+    width: 204px;
+    height: 186px;
+    background: no-repeat;
+}
+
+
+.dots-up {
+    top: 200px;
+    right: 0;
+    background-image: url(../Image/dots.png)
+}
+
+.dots-down {
+    bottom: 200px;
+    left: 0;
+
+    background-image: url(../Image/dots.png)
+}
+
+@media (max-width:1263px) {
+
+    .dots-up,
+    .dots-down {
+        background-image: none;
+    }
+}
+
 /* end variabel */
 
 
@@ -418,13 +467,14 @@ header .main-nav li:hover .mega-mainu {
 @media (max-width:991px) {
     .landing .container .text p {
         margin: 10px auto auto;
+        padding: 0px 35px;
     }
 }
 
 
 @media (max-width:767px) {
     .landing .container .text p {
-        font-size: 20px;
+        font-size: 17px;
     }
 }
 
@@ -517,9 +567,9 @@ header .main-nav li:hover .mega-mainu {
     border-radius: 6px;
 }
 
-@media (max-width:768px) {
+@media (max-width:570px) {
     .books .container .box {
-        margin: 20px;
+        margin: 0px 35px;
     }
 }
 
