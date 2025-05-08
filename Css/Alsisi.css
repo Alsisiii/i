@@ -442,8 +442,34 @@ header .main-nav li:hover .mega-mainu {
 
 .landing .container .text h1 {
     font-size: 40px;
+    width: 408px;
     margin: 0;
     letter-spacing: -1px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    animation: out 3s 1s both, bord 10s;
+}
+
+@keyframes out {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 408px;
+    }
+}
+
+
+@keyframes bord {
+    from {
+        border-right: 2px solid var(--main-color);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
 }
 
 
@@ -452,7 +478,19 @@ header .main-nav li:hover .mega-mainu {
     .landing .container .text h1 {
         font-size: 28px;
         margin-top: 78px;
+
     }
+
+    @keyframes out {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 280px;
+        }
+    }
+
 }
 
 .landing .container .text p {
@@ -461,21 +499,42 @@ header .main-nav li:hover .mega-mainu {
     color: #666;
     margin: 5px 0 0;
     max-width: 500px;
+    animation: vis 1s 3.7s both;
 }
+
+@keyframes vis {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 
 
 @media (max-width:991px) {
     .landing .container .text p {
         margin: 10px auto auto;
-        padding: 0px 35px;
+    }
+
+    .landing .container .text h1 {
+        margin: auto;
+        margin-top: 75px;
     }
 }
 
 
 @media (max-width:767px) {
     .landing .container .text p {
-        font-size: 17px;
+        font-size: 20px;
     }
+}
+
+.landing .container .image img {
+    max-width: 100%;
+    width: 600px;
 }
 
 .landing .container .image img {
